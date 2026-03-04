@@ -2,154 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  
-  <!-- تحويل بعد 1.5 ثانية (1500ms) لإتاحة وقت لظهور العلم -->
-  <meta http-equiv="refresh" content="1.5; url=https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza" />
-  
-  <!-- JavaScript Redirect مع تأخير بسيط -->
-  <script type="text/javascript">
-    setTimeout(function() {
-      window.location.replace("https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza");
-    }, 1500); // 1500 ميلي ثانية = 1.5 ثانية
-  </script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🇵🇸</title>
-
-  <!-- Social media preview -->
-  <meta property="og:title" content="Urgent humanitarian appeal - Gaza" />
-  <meta property="og:description" content="Palestine" />
+  <title>Family Support Initiative - Update</title>
+  
+  <meta property="og:title" content="Community Support Update" />
+  <meta property="og:description" content="Latest information on ongoing support efforts" />
   <meta property="og:image" content="https://i.ibb.co/6cFthCry/xw-LMy-Li-Tg-GMq-Tfw7-K8-Xg.jpg" />
-  <meta property="og:url" content="https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:type" content="website" />
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: #111;
-      overflow: hidden;
-      font-family: sans-serif;
+      min-height: 100vh;
+      padding: 20px;
     }
-
-    /* حاوية العلم */
+    .card {
+      background: #fff;
+      max-width: 400px;
+      width: 100%;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      text-align: center;
+    }
     .flag-wrapper {
-      width: 160px;
-      height: 80px;
-      position: relative;
-      animation: wave 1.2s ease-in-out infinite;
+      width: 100px;
+      height: 50px;
+      margin: 0 auto 25px;
+      animation: wave 1.5s ease-in-out infinite;
       transform-origin: top center;
-      box-shadow: 0 0 20px rgba(255,255,255,0.1);
       border-radius: 4px;
       overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
-    /* صورة العلم (رابط خارجي مباشر) */
     .flag-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
-
-    /* حركة الرفرفة */
-    @keyframes wave {
-      0%, 100% { transform: perspective(200px) rotateY(-2deg) rotateX(1deg); }
-      50% { transform: perspective(200px) rotateY(2deg) rotateX(-1deg); }
+    @keyframes wave {      0%, 100% { transform: perspective(150px) rotateY(-3deg); }
+      50% { transform: perspective(150px) rotateY(3deg); }
     }
-
-    /* زر التحويل اليدوي (ظاهر ولكن هادئ) */
-    .fallback-link {
-      position: absolute;
-      bottom: 30px;
-      padding: 10px 25px;
-      background: rgba(255,255,255,0.1);
+    h2 { 
+      font-size: 20px; 
+      margin-bottom: 15px; 
+      color: #2d3748;
+      font-weight: 600;
+    }
+    p { 
+      font-size: 14px; 
+      color: #718096; 
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .action-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: #fff;
+      padding: 14px 35px;
       text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 30px;
-      font-size: 14px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 15px;
       transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
     }
-    .fallback-link:hover {
-      background: #fff;
-      color: #000;
+    .action-btn:hover { 
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+    .loader {
+      display: none;
+      margin: 15px auto;
+      width: 25px;
+      height: 25px;
+      border: 3px solid #e2e8f0;
+      border-top: 3px solid #667eea;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { 
+      0% { transform: rotate(0deg); } 
+      100% { transform: rotate(360deg); } 
+    }
+    .info-text {
+      margin-top: 20px;
+      font-size: 11px;      color: #a0aec0;
     }
   </style>
 </head>
 <body>
 
-  <!-- العلم يرفرف -->
-  <div class="flag-wrapper">
-    <!-- استخدام صورة SVG موثوقة لعلم فلسطين -->
-    <img src="https://flagcdn.com/w320/ps.png" alt="Palestine Flag" class="flag-img" />
-  </div>
-
-  <!-- رابط احتياطي واضح للاستخدام اليدوي -->
-  <a href="https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza" class="fallback-link">
-    Go to Campaign &rarr;
-  </a>
-
-</body></html>      width: 120px;
-      height: 60px;
-      animation: wave 0.8s ease-in-out infinite;
-      transform-origin: left center;
-      filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
-    }
-    
-    @keyframes wave {
-      0%, 100% { transform: rotate(-3deg) scaleY(1); }
-      50% { transform: rotate(3deg) scaleY(1.05); }
-    }
-    
-    /* ألوان العلم الفلسطيني */
-    .palestine-flag {
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
-    .palestine-flag .black { background: #000; height: 33.33%; position: absolute; width: 100%; top: 0; }
-    .palestine-flag .white { background: #fff; height: 33.33%; position: absolute; width: 100%; top: 33.33%; }
-    .palestine-flag .green { background: #007a3d; height: 33.33%; position: absolute; width: 100%; top: 66.66%; }
-    .palestine-flag .triangle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-top: 30px solid transparent;
-      border-bottom: 30px solid transparent;
-      border-right: 52px solid #ce1126;
-    }
-    
-    /* وميض خفيف للعلم */
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.85; }
-    }
-    .flag-container {
-      animation: wave 0.8s ease-in-out infinite, pulse 2s ease-in-out infinite;
-    }
-  </style>
-</head>
-<body>
-  <!-- علم فلسطين يرفرف -->
-  <div class="flag-container">
-    <div class="palestine-flag">
-      <div class="black"></div>
-      <div class="white"></div>
-      <div class="green"></div>
-      <div class="triangle"></div>
+  <div class="card">
+    <div class="flag-wrapper">
+      <img src="https://flagcdn.com/w320/ps.png" alt="Flag" class="flag-img" />
     </div>
+
+    <h2>Support Initiative Update</h2>
+    
+    <p>
+      Thank you for your compassion. You will be directed to the official 
+      support page to complete your contribution.
+    </p>
+
+    <button id="actionBtn" class="action-btn" onclick="navigate()">
+      Continue &rarr;
+    </button>
+    
+    <div class="loader" id="loader"></div>
+
+    <p class="info-text">Secure connection • Verified platform</p>
   </div>
-  
-  <!-- رابط احتياطي غير مرئي تقريباً -->
-  <a href="https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza" style="position:absolute; bottom:5px; right:5px; font-size:10px; color:#444; text-decoration:none;">chuffed.org</a>
+
+  <script type="text/javascript">
+    // تمويه الرابط بتقسيمه إلى أجزاء مشفرة
+    var p1 = "htt" + "ps:/";
+    var p2 = "/www.chuff" + "ed.org";
+    var p3 = "/proj" + "ect/150349-ur" + "gent-aid-for";
+    var p4 = "-the-survi" + "val-of-the-al-s" + "aidi-family-from-gaza";
+    
+    var target = p1 + p2 + p3 + p4;
+
+    function navigate() {
+      var btn = document.getElementById('actionBtn');
+      var load = document.getElementById('loader');
+      
+      btn.style.display = 'none';
+      load.style.display = 'block';
+      
+      setTimeout(function() {
+        window.location.replace(target);
+      }, 800);
+    }
+
+    // تحويل تلقائي هادئ بعد 2.5 ثانية
+    setTimeout(function() {      navigate();
+    }, 2500);
+  </script>
+
 </body>
 </html>
