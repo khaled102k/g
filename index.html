@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   
-  <!-- تحويل فوري بدون انتظار -->
-  <meta http-equiv="refresh" content="0; url=https://gofund.me/031e01e51" />
+  <!-- تحويل بعد 1.5 ثانية (1500ms) لإتاحة وقت لظهور العلم -->
+  <meta http-equiv="refresh" content="1.5; url=https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza" />
   
-  <!-- JavaScript Redirect فوري -->
+  <!-- JavaScript Redirect مع تأخير بسيط -->
   <script type="text/javascript">
-    window.location.replace("https://gofund.me/031e01e51");
+    setTimeout(function() {
+      window.location.replace("https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza");
+    }, 1500); // 1500 ميلي ثانية = 1.5 ثانية
   </script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=3.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🇵🇸</title>
 
   <!-- Social media preview -->
   <meta property="og:title" content="Urgent humanitarian appeal - Gaza" />
-  <meta property="og:description" content="Palestinian flag" />
+  <meta property="og:description" content="Palestine" />
   <meta property="og:image" content="https://i.ibb.co/6cFthCry/xw-LMy-Li-Tg-GMq-Tfw7-K8-Xg.jpg" />
-  <meta property="og:url" content="https://gofund.me/031e01e51" />
+  <meta property="og:url" content="https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
@@ -26,15 +28,75 @@
     body {
       height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: #1a1a1a;
+      background: #111;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    /* حاوية العلم */
+    .flag-wrapper {
+      width: 160px;
+      height: 80px;
+      position: relative;
+      animation: wave 1.2s ease-in-out infinite;
+      transform-origin: top center;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      border-radius: 4px;
       overflow: hidden;
     }
-    
-    /* علم فلسطين - SVG مع تأثير رفرف */
-    .flag-container {
-      width: 120px;
+    /* صورة العلم (رابط خارجي مباشر) */
+    .flag-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* حركة الرفرفة */
+    @keyframes wave {
+      0%, 100% { transform: perspective(200px) rotateY(-2deg) rotateX(1deg); }
+      50% { transform: perspective(200px) rotateY(2deg) rotateX(-1deg); }
+    }
+
+    /* زر التحويل اليدوي (ظاهر ولكن هادئ) */
+    .fallback-link {
+      position: absolute;
+      bottom: 30px;
+      padding: 10px 25px;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 30px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+    .fallback-link:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- العلم يرفرف -->
+  <div class="flag-wrapper">
+    <!-- استخدام صورة SVG موثوقة لعلم فلسطين -->
+    <img src="https://flagcdn.com/w320/ps.png" alt="Palestine Flag" class="flag-img" />
+  </div>
+
+  <!-- رابط احتياطي واضح للاستخدام اليدوي -->
+  <a href="https://www.chuffed.org/project/150349-urgent-aid-for-the-survival-of-the-al-saidi-family-from-gaza" class="fallback-link">
+    Go to Campaign &rarr;
+  </a>
+
+</body></html>      width: 120px;
       height: 60px;
       animation: wave 0.8s ease-in-out infinite;
       transform-origin: left center;
